@@ -1,8 +1,8 @@
 module.exports = (app) => {
-    let todoList = require('../controllers/ontrollers');
+    let todoList = require('../controllers/controllers');
     // our Routes
-    app.route('/login/:userName')
-        .get(todoList.checkLogin) 
+    app.route('/login')
+        .post(todoList.checkLogin) 
         //.post(todoList.createTask);
     
     app.route('/upload')
